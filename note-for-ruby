@@ -1,0 +1,24 @@
+Ruby on Rails tutorial : 
+http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
+
+
+A detailed process of Model-View-Control (MVC) in Rails
+
+1. The browser issues a request for the /users URI.
+2. Rails routes /users to the index action in the Users controller.
+3. The index action asks the User model to retrieve all users (User.all).
+4. The User model pulls all the users from the database.
+5. The User model returns the list of users to the controller.
+6. The controller captures the users in the @users variable, which is passed to the index view.
+7. The view uses embedded Ruby to render the page as HTML.
+8. The controller passes the HTML back to the browser.
+
+
+
+Command line
+1. change gemfile
+2. bundle install --without production  // install all gems and delay production
+3. rails generate scaffold User name:string email:string  # generate database
+4. bundle exec rake db:migrate  # execute rake db:migrate
+5. rails s   # start the server
+
